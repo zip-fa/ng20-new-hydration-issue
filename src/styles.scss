@@ -1,1 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.pokemons-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.no-value {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #ff6b6b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.no-value p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.app-container {
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.navigation {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.nav-link:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: #667eea;
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.main-content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-brand h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
